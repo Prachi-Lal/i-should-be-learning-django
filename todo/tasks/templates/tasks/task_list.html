@@ -1,0 +1,7 @@
+My To-Do List
+{% csrf_token %} {{ form.as_p }}
+{% for task in tasks %}
+{{ task.title }} {% if task.completed %}✔️{% else %}❌{% endif %} Edit Delete
+{% empty %}
+No tasks yet!
+{% endfor %}
