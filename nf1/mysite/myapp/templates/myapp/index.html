@@ -1,0 +1,14 @@
+{% extends 'myapp/base.html' %}
+
+{% block body%}
+    <ul>
+        {% for item in item_list%}
+        <a href="{% url 'myapp:details' item.id %}">
+        <li>{{ item.item_name }} --> {{ item.item_desc }} --> {{ item.item_price }}</li>
+        </a>
+        {%endfor%}
+    </ul>
+    
+{% endblock  %}
+
+    
